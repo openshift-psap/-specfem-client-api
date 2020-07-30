@@ -29,9 +29,9 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/client-go/rest"
 
-	"gitlab.com/kpouget_psap/specfem-api/specfem-api/pkg/apis"
-	"gitlab.com/kpouget_psap/specfem-api/specfem-api/pkg/controller"
-	"gitlab.com/kpouget_psap/specfem-api/specfem-api/version"
+	"gitlab.com/kpouget_psap/specfem-api/pkg/apis"
+	"gitlab.com/kpouget_psap/specfem-api/pkg/controller"
+	"gitlab.com/kpouget_psap/specfem-api/version"
 
 	"github.com/operator-framework/operator-sdk/pkg/k8sutil"
 	kubemetrics "github.com/operator-framework/operator-sdk/pkg/kube-metrics"

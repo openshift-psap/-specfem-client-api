@@ -1,4 +1,4 @@
-module gitlab.com/kpouget_psap/specfem-api/specfem-api
+module gitlab.com/kpouget_psap/specfem-api
 
 go 1.13
 
