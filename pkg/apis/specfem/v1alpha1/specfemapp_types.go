@@ -24,6 +24,11 @@ type SpecfemSpec struct {
 	Nex int32 `json:"nex"`
 }
 
+// ResourcesSpec defines the OpenShift resource usage
+type ResourcesSpec struct {
+	StorageClassName string `json:"storageClassName"`
+}
+
 // SpecfemAppSpec defines the desired state of SpecfemApp
 type SpecfemAppSpec struct {
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
@@ -33,6 +38,8 @@ type SpecfemAppSpec struct {
 	Exec ExecSpec `json:"exec"`
 
 	Specfem SpecfemSpec `json:"specfem"`
+
+	Resources ResourcesSpec `json:"resources"`
 }
 
 // SpecfemAppStatus defines the observed state of SpecfemApp
