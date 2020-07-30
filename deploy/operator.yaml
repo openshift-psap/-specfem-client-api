@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: specfem-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: specfem-api
+  template:
+    metadata:
+      labels:
+        name: specfem-api
+    spec:
+      serviceAccountName: specfem-api
+      containers:
+        - name: specfem-api
+          # Replace this with the built image name
+          image: REPLACE_IMAGE
+          command:
+          - specfem-api
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "specfem-api"

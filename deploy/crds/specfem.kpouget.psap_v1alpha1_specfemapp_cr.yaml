@@ -1,0 +1,7 @@
+apiVersion: specfem.kpouget.psap/v1alpha1
+kind: SpecfemApp
+metadata:
+  name: example-specfemapp
+spec:
+  # Add fields here
+  size: 3
