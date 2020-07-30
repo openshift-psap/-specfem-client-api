@@ -27,6 +27,7 @@ type SpecfemSpec struct {
 // ResourcesSpec defines the OpenShift resource usage
 type ResourcesSpec struct {
 	StorageClassName string `json:"storageClassName"`
+	WorkerNodeSelector map[string]string `json:"workerNodeSelector"`
 }
 
 // SpecfemAppSpec defines the desired state of SpecfemApp
