@@ -28,6 +28,7 @@ type SpecfemSpec struct {
 type ResourcesSpec struct {
 	StorageClassName string `json:"storageClassName"`
 	WorkerNodeSelector map[string]string `json:"workerNodeSelector"`
+	SlotsPerWorker int32 `json:"slotsPerWorker"`
 }
 
 // SpecfemAppSpec defines the desired state of SpecfemApp
