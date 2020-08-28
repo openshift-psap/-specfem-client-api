@@ -1,7 +1,20 @@
 apiVersion: specfem.kpouget.psap/v1alpha1
 kind: SpecfemApp
 metadata:
-  name: example-specfemapp
+  name: specfem-sample
+  namespace: specfem
 spec:
-  # Add fields here
-  size: 3
+  git:
+    uri: https://gitlab.com/kpouget_psap/specfem3d_globe.git
+    ref: master
+  exec:
+    nproc: 1
+    ncore: 8
+    slotsPerWorker: 1
+  specfem:
+    nex: 32
+  resources:
+    useUbiImage: true
+    storageClassName: ""
+    workerNodeSelector:
+      node-role.kubernetes.io/worker:
