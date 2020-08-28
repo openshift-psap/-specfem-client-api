@@ -17,6 +17,7 @@ type GitSpec struct {
 type ExecSpec struct {
 	Nproc int32 `json:"nproc"`
 	Ncore int32 `json:"ncore"`
+	SlotsPerWorker int32 `json:"slotsPerWorker"`
 }
 
 // MpiSpec defines the execution conditions
@@ -28,7 +29,6 @@ type SpecfemSpec struct {
 type ResourcesSpec struct {
 	StorageClassName string `json:"storageClassName"`
 	WorkerNodeSelector map[string]string `json:"workerNodeSelector"`
-	SlotsPerWorker int32 `json:"slotsPerWorker"`
 	UseUbiImage bool `json:"useUbiImage"`
 }
 
