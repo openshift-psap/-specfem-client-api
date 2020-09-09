@@ -30,6 +30,7 @@ type ResourcesSpec struct {
 	StorageClassName string `json:"storageClassName"`
 	WorkerNodeSelector map[string]string `json:"workerNodeSelector"`
 	UseUbiImage bool `json:"useUbiImage"`
+	RelyOnSharedFS bool `json:"relayOnSharedFS"`
 }
 
 // SpecfemAppSpec defines the desired state of SpecfemApp
