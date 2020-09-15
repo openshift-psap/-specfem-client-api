@@ -25,12 +25,21 @@ type SpecfemSpec struct {
 	Nex int32 `json:"nex"`
 }
 
+type NetworkType string
+
+const (
+    NetworkTypeDefault     NetworkType = "Default"
+    NetworkTypeMultus      NetworkType = "Multus"
+    NetworkTypeHostNetwork NetworkType = "HostNetwork"
+)
+
 // ResourcesSpec defines the OpenShift resource usage
 type ResourcesSpec struct {
 	StorageClassName string `json:"storageClassName"`
 	WorkerNodeSelector map[string]string `json:"workerNodeSelector"`
 	UseUbiImage bool `json:"useUbiImage"`
 	RelyOnSharedFS bool `json:"relayOnSharedFS"`
+	NetworkType NetworkType `json:"networkType"`
 }
 
 // SpecfemAppSpec defines the desired state of SpecfemApp
