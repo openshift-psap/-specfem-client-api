@@ -1,4 +1,4 @@
-module gitlab.com/kpouget_psap/specfem-api
+module github.com/openshift-psap/specfem-client-api
 
 go 1.13
 

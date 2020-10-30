@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"gitlab.com/kpouget_psap/specfem-api/specfem-api/pkg/apis/specfem/v1alpha1"
+	"github.com/openshift-psap/specfem-client-api/specfem-api/pkg/apis/specfem/v1alpha1"
 )
 
 func init() {

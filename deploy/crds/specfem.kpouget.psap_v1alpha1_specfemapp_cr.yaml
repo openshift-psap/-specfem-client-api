@@ -5,8 +5,8 @@ metadata:
   namespace: specfem
 spec:
   git:
-    uri: https://gitlab.com/kpouget_psap/specfem3d_globe.git
-    ref: master
+    uri: https://github.com/geodynamics/specfem3d_globe.git
+    ref: fecb1af5
   exec:
     nproc: 1
     ncore: 8
